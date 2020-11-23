@@ -7,6 +7,7 @@ public class Tester{
     System.out.println(test.multiply(test2));
     System.out.println(test.multiply(test2));
     System.out.println(test.divide(test2));
+    System.out.println(test.subtract(test2));
 
   }
 }
