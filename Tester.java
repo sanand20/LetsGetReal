@@ -5,6 +5,8 @@ public class Tester{
     System.out.println(test.equals(test2));
     System.out.println(test.add(test2));
     System.out.println(test.multiply(test2));
+    System.out.println(test.multiply(test2));
+    System.out.println(test.divide(test2));
 
   }
 }
