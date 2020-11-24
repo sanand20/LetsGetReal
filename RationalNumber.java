@@ -103,7 +103,7 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-    int gcd = gcd(numerator, denominator);
+    int gcd = gcd(Math.abs(numerator), Math.abs(denominator));
     numerator = numerator/gcd;
     denominator = denominator/gcd;
   }
@@ -126,7 +126,9 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    return (this.multiply(other.reciprocal()));
+    RationalNumber ans = (this.multiply(other.reciprocal()));
+    ans.reduce();
+    return ans;
   }
 
   /**
@@ -140,6 +142,7 @@ public class RationalNumber extends RealNumber
     int ansnumerator = (num * otherden + den * othernum);
     int ansdenominator = (den * otherden);
     RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
+    ans.reduce();
     return ans;
   }
   /**
@@ -153,6 +156,7 @@ public class RationalNumber extends RealNumber
     int ansnumerator = (num * otherden - den * othernum);
     int ansdenominator = (den * otherden);
     RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
+    ans.reduce();
     return ans;
   }
 }

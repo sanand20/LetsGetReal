@@ -1,9 +1,16 @@
 public class Tester{
   public static void main(String[] args) {
-    RationalNumber test = new RationalNumber(20,-2);
+    RationalNumber test = new RationalNumber(3,4);
+    RationalNumber test2 = new RationalNumber(6,5);
+    System.out.println(test.add(test2).toString());
     System.out.println(test.getValue());
     System.out.println(test.getNumerator());
     System.out.println(test.getDenominator());
+    System.out.println(test.divide(test2).toString());
+    System.out.println(test.add(test2).toString());
+    System.out.println(test.subtract(test2).toString());
+
+
 
 
 
