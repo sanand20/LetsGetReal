@@ -103,14 +103,23 @@ public class RationalNumber extends RealNumber
   *reduced after construction.
   */
   private void reduce(){
-
+    int gcd = gcd(numerator, denominator);
+    numerator = numerator/gcd;
+    denominator = denominator/gcd;
   }
   /******************Operations Return a new RationalNumber!!!!****************/
   /**
   *Return a new RationalNumber that is the product of this and the other
   */
   public RationalNumber multiply(RationalNumber other){
-    return null;
+    int num = getNumerator();
+    int den = getDenominator();
+    int othernum = other.getNumerator();
+    int otherden = other.getDenominator();
+    numerator = (num * othernum);
+    denominator = (den * otherden);
+    RationalNumber ans = new RationalNumber(numerator, denominator);
+    return ans;
   }
 
   /**
