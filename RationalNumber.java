@@ -116,9 +116,9 @@ public class RationalNumber extends RealNumber
     int den = getDenominator();
     int othernum = other.getNumerator();
     int otherden = other.getDenominator();
-    numerator = (num * othernum);
-    denominator = (den * otherden);
-    RationalNumber ans = new RationalNumber(numerator, denominator);
+    int ansnumerator = (num * othernum);
+    int ansdenominator = (den * otherden);
+    RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
     return ans;
   }
 
@@ -137,15 +137,22 @@ public class RationalNumber extends RealNumber
     int den = getDenominator();
     int othernum = other.getNumerator();
     int otherden = other.getDenominator();
-    numerator = (num * otherden + den * othernum);
-    denominator = (den * otherden)
-    RationalNumber ans = new RationalNumber(numerator, denominator);
+    int ansnumerator = (num * otherden + den * othernum);
+    int ansdenominator = (den * otherden);
+    RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
     return ans;
   }
   /**
   *Return a new RationalNumber that this minus the other
   */
   public RationalNumber subtract(RationalNumber other){
-    return null;
+    int num = getNumerator();
+    int den = getDenominator();
+    int othernum = other.getNumerator();
+    int otherden = other.getDenominator();
+    int ansnumerator = (num * otherden - den * othernum);
+    int ansdenominator = (den * otherden);
+    RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
+    return ans;
   }
 }
