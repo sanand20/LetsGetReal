@@ -57,6 +57,8 @@ public class RationalNumber extends RealNumber
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
   */
   public boolean equals(RationalNumber other){
+    this.reduce();
+    other.reduce();
     double num = getNumerator();
     double den = getDenominator();
     double othernum = other.getNumerator();
@@ -119,6 +121,7 @@ public class RationalNumber extends RealNumber
     int ansnumerator = (num * othernum);
     int ansdenominator = (den * otherden);
     RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
+    ans.reduce();
     return ans;
   }
 
@@ -126,7 +129,13 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the this divided by the other
   */
   public RationalNumber divide(RationalNumber other){
-    RationalNumber ans = (this.multiply(other.reciprocal()));
+    int num = getNumerator();
+    int den = getDenominator();
+    int othernum = other.getNumerator();
+    int otherden = other.getDenominator();
+    int ansnumerator = (num * othernum);
+    int ansdenominator = (den * otherden);
+    RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);
     ans.reduce();
     return ans;
   }
