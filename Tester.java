@@ -2,6 +2,9 @@ public class Tester{
   public static void main(String[] args) {
     RationalNumber test = new RationalNumber(20,-2);
     System.out.println(test.getValue());
+    System.out.println(test.getNumerator());
+    System.out.println(test.getDenominator());
+
 
 
 
