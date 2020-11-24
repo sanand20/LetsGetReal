@@ -46,10 +46,12 @@ public class RationalNumber extends RealNumber
   *and denominator as this RationalNumber but reversed.
   */
   public RationalNumber reciprocal(){
-    double newnum = denominator;
-    double newden = numerator;
+    int newnum = denominator;
+    int newden = numerator;
     numerator = newnum;
     denominator = newden;
+    RationalNumber ans = new RationalNumber (numerator, denominator);
+    return (ans);
   }
   /**
   *@return true when the RationalNumbers have the same numerators and denominators, false otherwise.
@@ -59,7 +61,7 @@ public class RationalNumber extends RealNumber
     double den = getDenominator();
     double othernum = other.getNumerator();
     double otherden = other.getDenominator();
-    return (num == othernum && den = otherden);
+    return ((num == othernum) && (den == otherden));
   }
 
 
