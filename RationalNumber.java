@@ -133,7 +133,14 @@ public class RationalNumber extends RealNumber
   *Return a new RationalNumber that is the sum of this and the other
   */
   public RationalNumber add(RationalNumber other){
-    return null;
+    int num = getNumerator();
+    int den = getDenominator();
+    int othernum = other.getNumerator();
+    int otherden = other.getDenominator();
+    numerator = (num * otherden + den * othernum);
+    denominator = (den * otherden)
+    RationalNumber ans = new RationalNumber(numerator, denominator);
+    return ans;
   }
   /**
   *Return a new RationalNumber that this minus the other
