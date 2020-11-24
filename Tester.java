@@ -1,6 +1,11 @@
 public class Tester{
   public static void main(String[] args) {
-    RealNumber test = new RealNumber(-2.2);
+    RationalNumber test = new RationalNumber(20,-2);
+    System.out.println(test.getValue());
+
+
+
+  /*  RealNumber test = new RealNumber(-2.2);
     RealNumber test2 = new RealNumber(4.5);
     System.out.println(test.equals(test2));
     System.out.println(test.add(test2));
@@ -8,6 +13,6 @@ public class Tester{
     System.out.println(test.multiply(test2));
     System.out.println(test.divide(test2));
     System.out.println(test.subtract(test2));
-
+*/
   }
 }

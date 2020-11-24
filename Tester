@@ -1,0 +1,7 @@
+public class Tester{
+  public static void main(String[] args) {
+    RealNumber test = new RealNumber(6.8);
+    ReaNumber test2 = new RealNumber(6.8);
+    System.out.println(test.equals(test2));
+  }
+}
