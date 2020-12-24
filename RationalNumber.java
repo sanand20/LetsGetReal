@@ -1,4 +1,4 @@
-public class RationalNumber extends Number
+public class RationalNumber extends RealNumber
 {
   private int numerator;
   private int denominator;
@@ -10,6 +10,7 @@ public class RationalNumber extends Number
   *@param deno the denominator
   */
   public RationalNumber(int nume, int deno){
+    super(0.0);
     if (deno == 0){
       numerator = 0;
       denominator = 1;
@@ -84,6 +85,9 @@ public class RationalNumber extends Number
   *@return the value of the GCD
   */
   private static int gcd(int a, int b){
+    if (b==0){
+      return 1;
+    }
     int x = 0;
     int r = 10;
     int gcd = 1;
@@ -92,7 +96,7 @@ public class RationalNumber extends Number
       b = a;
       a = c;
     }
-    while (r>0){
+    while (r>0 && b!=0){
       gcd = b;
       x = a/b;
       r = a-(x*b);
@@ -135,8 +139,8 @@ public class RationalNumber extends Number
   public RationalNumber divide(RationalNumber other){
     int num = getNumerator();
     int den = getDenominator();
-    int othernum = other.getNumerator();
-    int otherden = other.getDenominator();
+    int othernum = other.getDenominator();
+    int otherden = other.getNumerator();
     int ansnumerator = (num * othernum);
     int ansdenominator = (den * otherden);
     RationalNumber ans = new RationalNumber(ansnumerator, ansdenominator);

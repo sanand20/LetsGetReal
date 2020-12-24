@@ -7,7 +7,7 @@ abstract class Number{
       return (val == 0 && otherval == 0);
     }
     else{
-      return Math.abs((val - otherval)/val) < (0.00001 * val);
+      return Math.abs((val - otherval)/val) < (0.000001 * val);
     }
   }
   public int compareTo(Number other){
@@ -21,4 +21,5 @@ abstract class Number{
     }
     return -10;
   }
+
 }
